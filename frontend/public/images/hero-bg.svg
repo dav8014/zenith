@@ -1,0 +1,220 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080" role="img" aria-label="Fondo futurista oscuro con coche deportivo en azul neón">
+  <defs>
+    <radialGradient id="blueGlow" cx="72%" cy="52%" r="44%">
+      <stop offset="0%" stop-color="#006eff" stop-opacity="0.24"/>
+      <stop offset="42%" stop-color="#004fc4" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#030508" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="floorGlow" cx="68%" cy="64%" r="30%">
+      <stop offset="0%" stop-color="#0077ff" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#030508" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="leftFade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#030508" stop-opacity="0.96"/>
+      <stop offset="56%" stop-color="#030508" stop-opacity="0.72"/>
+      <stop offset="100%" stop-color="#030508" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="carBody" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1630"/>
+      <stop offset="52%" stop-color="#050914"/>
+      <stop offset="100%" stop-color="#02050c"/>
+    </linearGradient>
+
+    <linearGradient id="carLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.95"/>
+      <stop offset="38%" stop-color="#087dff" stop-opacity="0.90"/>
+      <stop offset="100%" stop-color="#0066ff" stop-opacity="0.55"/>
+    </linearGradient>
+
+    <linearGradient id="roadLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0066ff" stop-opacity="0"/>
+      <stop offset="45%" stop-color="#0066ff" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#00d4ff" stop-opacity="0.08"/>
+    </linearGradient>
+
+    <linearGradient id="headLight" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00eaff" stop-opacity="1"/>
+      <stop offset="65%" stop-color="#0785ff" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#0066ff" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="tailLight" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff1d35" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#ff1d35" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="softBlur" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <filter id="blueNeon" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="3" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="wideGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0V64" fill="none" stroke="#4a6a9f" stroke-width="0.45" opacity="0.22"/>
+    </pattern>
+    <pattern id="gridSmall" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M16 0H0V16" fill="none" stroke="#4a6a9f" stroke-width="0.25" opacity="0.08"/>
+    </pattern>
+  </defs>
+
+  <rect width="1920" height="1080" fill="#030508"/>
+  <rect width="1920" height="1080" fill="url(#blueGlow)"/>
+  <rect width="1920" height="1080" fill="url(#floorGlow)"/>
+  <rect width="1920" height="1080" fill="url(#grid)" opacity="0.42"/>
+  <rect width="1920" height="1080" fill="url(#gridSmall)" opacity="0.34"/>
+
+  <g opacity="0.22">
+    <line x1="0" y1="612" x2="1920" y2="612" stroke="#1d365d" stroke-width="1"/>
+    <line x1="0" y1="684" x2="1920" y2="684" stroke="#0e2344" stroke-width="1"/>
+    <line x1="0" y1="768" x2="1920" y2="768" stroke="#0e2344" stroke-width="0.7"/>
+  </g>
+
+  <g opacity="0.34">
+    <circle cx="1120" cy="92" r="1.1" fill="#d7e9ff"/>
+    <circle cx="1372" cy="42" r="0.8" fill="#d7e9ff"/>
+    <circle cx="1518" cy="104" r="1" fill="#d7e9ff"/>
+    <circle cx="1634" cy="210" r="1.2" fill="#d7e9ff"/>
+    <circle cx="1302" cy="231" r="0.8" fill="#d7e9ff"/>
+    <circle cx="1700" cy="76" r="0.6" fill="#d7e9ff"/>
+    <circle cx="990" cy="308" r="0.6" fill="#d7e9ff"/>
+    <circle cx="822" cy="152" r="0.6" fill="#d7e9ff"/>
+    <circle cx="705" cy="250" r="0.5" fill="#d7e9ff"/>
+    <circle cx="1588" cy="352" r="0.5" fill="#d7e9ff"/>
+  </g>
+
+  <!-- Zona oscura para que el texto de la web siga leyendo bien -->
+  <rect width="1000" height="1080" fill="url(#leftFade)"/>
+
+  <!-- Resplandor inferior y línea de suelo del coche -->
+  <ellipse cx="1320" cy="660" rx="470" ry="44" fill="#0066ff" opacity="0.11" filter="url(#wideGlow)"/>
+  <path d="M900 660 C1080 650 1375 650 1665 660" stroke="url(#roadLine)" stroke-width="3" opacity="0.82" filter="url(#blueNeon)"/>
+  <path d="M1018 681 C1190 686 1445 686 1605 680" stroke="#0066ff" stroke-width="1" opacity="0.26"/>
+
+  <!-- Coche mejorado: silueta más limpia y simétrica -->
+  <g transform="translate(900 456)">
+    <!-- brillo exterior suave -->
+    <path d="M0 170
+             C20 130 52 112 99 103
+             C152 93 202 92 274 88
+             C310 50 370 30 449 28
+             C553 26 650 52 720 96
+             C765 100 806 112 848 132
+             C874 145 886 162 888 183
+             L858 183
+             C845 142 810 121 765 121
+             C719 121 683 146 674 183
+             L216 183
+             C204 144 169 121 126 121
+             C81 121 47 145 36 183
+             L0 183 Z"
+          fill="#0066ff" opacity="0.11" filter="url(#wideGlow)"/>
+
+    <!-- cuerpo principal -->
+    <path d="M0 170
+             C18 132 50 113 98 104
+             C148 95 205 94 277 90
+             C315 52 375 33 450 32
+             C552 31 650 56 717 98
+             C764 101 809 113 848 133
+             C874 146 887 164 890 184
+             L858 184
+             C845 145 811 124 766 124
+             C720 124 686 148 676 184
+             L216 184
+             C205 148 170 124 126 124
+             C82 124 48 147 37 184
+             L0 184 Z"
+          fill="url(#carBody)" stroke="#0b1f45" stroke-width="1.4" opacity="0.96"/>
+
+    <!-- línea superior de carrocería -->
+    <path d="M42 147
+             C102 125 174 121 284 116
+             C322 76 384 55 458 54
+             C552 53 641 75 704 113
+             C760 116 810 126 858 146"
+          fill="none" stroke="url(#carLine)" stroke-width="3" stroke-linecap="round" opacity="0.88" filter="url(#blueNeon)"/>
+
+    <!-- techo y ventanas, proporción más limpia -->
+    <path d="M306 111
+             C346 69 397 54 459 54
+             C548 54 631 76 690 111
+             C566 119 433 120 306 111 Z"
+          fill="#02060e" stroke="#0e3f85" stroke-width="1" opacity="0.82"/>
+    <path d="M332 108
+             C369 75 411 63 461 63
+             L456 109 Z"
+          fill="#030813" opacity="0.78"/>
+    <path d="M470 62
+             C548 64 613 82 667 108
+             L476 109 Z"
+          fill="#030813" opacity="0.78"/>
+    <line x1="462" y1="61" x2="462" y2="111" stroke="#0d2b5c" stroke-width="1" opacity="0.55"/>
+
+    <!-- capó, lateral y detalles -->
+    <path d="M88 140 C156 128 215 126 302 122" fill="none" stroke="#0f5dd8" stroke-width="1.3" opacity="0.7"/>
+    <path d="M497 124 C596 122 692 119 777 126" fill="none" stroke="#0f5dd8" stroke-width="1.3" opacity="0.55"/>
+    <path d="M493 139 L520 136" stroke="#103a78" stroke-width="2" stroke-linecap="round" opacity="0.75"/>
+    <path d="M657 139 L684 136" stroke="#103a78" stroke-width="2" stroke-linecap="round" opacity="0.75"/>
+    <path d="M291 106 C296 98 305 96 314 99" stroke="#0f5dd8" stroke-width="3" stroke-linecap="round" opacity="0.42"/>
+
+    <!-- faro delantero -->
+    <path d="M22 142 C45 132 73 132 90 136 C80 148 52 153 26 151 Z" fill="url(#headLight)" opacity="0.98" filter="url(#blueNeon)"/>
+    <path d="M-45 146 C-5 136 38 135 94 139" stroke="#00d4ff" stroke-width="10" opacity="0.10" filter="url(#wideGlow)"/>
+
+    <!-- faro trasero -->
+    <path d="M820 137 C846 136 866 137 887 140 C871 151 846 153 818 149 Z" fill="#ff1d35" opacity="0.9" filter="url(#blueNeon)"/>
+    <rect x="860" y="138" width="92" height="4" rx="2" fill="url(#tailLight)" opacity="0.35" filter="url(#softBlur)"/>
+
+    <!-- ruedas equilibradas -->
+    <g transform="translate(126 184)">
+      <circle r="51" fill="#02050b" stroke="#10315d" stroke-width="2"/>
+      <circle r="39" fill="#050a13" stroke="#0c2448" stroke-width="1.4"/>
+      <circle r="9" fill="#061325" stroke="#0e3f85" stroke-width="1"/>
+      <g stroke="#123866" stroke-width="1" opacity="0.64">
+        <line x1="0" y1="-35" x2="0" y2="-12"/>
+        <line x1="0" y1="35" x2="0" y2="12"/>
+        <line x1="-35" y1="0" x2="-12" y2="0"/>
+        <line x1="35" y1="0" x2="12" y2="0"/>
+        <line x1="-25" y1="-25" x2="-9" y2="-9"/>
+        <line x1="25" y1="25" x2="9" y2="9"/>
+        <line x1="25" y1="-25" x2="9" y2="-9"/>
+        <line x1="-25" y1="25" x2="-9" y2="9"/>
+      </g>
+    </g>
+
+    <g transform="translate(766 184)">
+      <circle r="51" fill="#02050b" stroke="#10315d" stroke-width="2"/>
+      <circle r="39" fill="#050a13" stroke="#0c2448" stroke-width="1.4"/>
+      <circle r="9" fill="#061325" stroke="#0e3f85" stroke-width="1"/>
+      <g stroke="#123866" stroke-width="1" opacity="0.64">
+        <line x1="0" y1="-35" x2="0" y2="-12"/>
+        <line x1="0" y1="35" x2="0" y2="12"/>
+        <line x1="-35" y1="0" x2="-12" y2="0"/>
+        <line x1="35" y1="0" x2="12" y2="0"/>
+        <line x1="-25" y1="-25" x2="-9" y2="-9"/>
+        <line x1="25" y1="25" x2="9" y2="9"/>
+        <line x1="25" y1="-25" x2="9" y2="-9"/>
+        <line x1="-25" y1="25" x2="-9" y2="9"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- estelas laterales -->
+  <g opacity="0.50" filter="url(#softBlur)">
+    <rect x="1786" y="568" width="134" height="5" fill="#0066ff" opacity="0.30"/>
+    <rect x="1805" y="583" width="115" height="4" fill="#0066ff" opacity="0.24"/>
+    <rect x="1790" y="562" width="21" height="5" fill="#00a6ff" opacity="0.85"/>
+    <rect x="1790" y="578" width="21" height="5" fill="#00a6ff" opacity="0.75"/>
+  </g>
+</svg>

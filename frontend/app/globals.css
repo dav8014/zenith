@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-bg-primary: #030508;
+  --color-bg-secondary: #080C13;
+  --color-accent: #0066FF;
+  --color-accent-dark: #004CC4;
+  --color-accent-light: #3385FF;
+
+  /* Fonts — populated by next/font/google variables */
+  --font-exo2: var(--font-exo2-var), 'Exo 2', sans-serif;
+  --font-lato: var(--font-lato-var), Lato, sans-serif;
+  --font-roboto-mono: 'Roboto Mono', monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  background-color: #030508;
+  color: #ffffff;
+  font-family: var(--font-lato-var), Lato, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Glassmorphism — Hostinger Horizon */
+.glass {
+  background: rgba(8, 12, 19, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid #1A2035;
+}
+
+/* Grid pattern */
+.grid-pattern {
+  background-image:
+    linear-gradient(rgba(0, 102, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 102, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Terminal text */
+.terminal-text {
+  font-family: 'Roboto Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+/* Metric divider */
+.metric-divider {
+  border-bottom: 1px solid #1A2035;
+}
+
+/* Pulse dot */
+.pulse-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #0066FF;
+  border-radius: 50%;
+  flex-shrink: 0;
+  animation: pulse-blue 2s ease-in-out infinite;
+}
+
+@keyframes pulse-blue {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(0, 102, 255, 0.4); }
+  50% { opacity: 0.8; box-shadow: 0 0 0 6px rgba(0, 102, 255, 0); }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #080C13; }
+::-webkit-scrollbar-thumb { background: #1A2035; border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #0066FF; }
+
+/* Range input */
+input[type='range'] { accent-color: #0066FF; }
+
+/* Selection */
+::selection { background: rgba(0, 102, 255, 0.3); color: #fff; }
+
+.imagen-coche-container {
+    width: 100%;       /* O el tamaño que le hayas dado */
+    height: 200px;     /* O la altura exacta que quieras */
+    overflow: hidden;  /* Esto corta lo que se salga de la franja */
+}
+
+.imagen-coche-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* MAGIA: Ajusta la imagen sin estirarla */
+    object-position: center; /* Centra el enfoque de la imagen */
+    transition: transform 0.3s ease; /* Para que el efecto al pasar el ratón sea suave */
+}
+
+/* Si quieres que al pasar el ratón haga un pequeño zoom */
+.imagen-coche-container:hover img {
+    transform: scale(1.05);
+}
