@@ -1,0 +1,31 @@
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+
+# Variables de entorno
+.env
+.env.local
+.env.production
+
+# Next.js
+frontend/.next/
+frontend/node_modules/
+frontend/.env.local
+
+# Base de datos
+*.sqlite3
+
+# Playwright
+backend/etl/playwright-browsers/
+
+# Sistema
+.DS_Store
+Thumbs.db
