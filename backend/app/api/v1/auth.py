@@ -7,6 +7,9 @@ from app.core.security import create_access_token, verify_password
 from app.schemas.usuario import LoginRequest, TokenOut, UsuarioCreate, UsuarioOut, UsuarioRegistro
 from app.services import usuario_service
 
+from app.core.dependencies import get_current_admin
+from app.models.usuario import Usuario
+
 router = APIRouter(prefix="/auth", tags=["Autenticación"])
 
 
@@ -38,21 +41,21 @@ def login(datos: LoginRequest, db: Session = Depends(get_db)):
         "rol": rol_str
     })
     
-    return TokenOut(access_token=token)
+    return TokenOut(access_token=token, rol=rol_str)
 
 
 @router.post(
     "/registro",
     response_model=UsuarioOut,
     status_code=status.HTTP_201_CREATED,
-    summary="Crear cuenta",
-    description=(
-        "Registra un nuevo usuario. El rol `admin` solo se permite si no existe "
-        "ningún administrador en el sistema (configuración inicial). "
-        "En caso contrario, el rol se asigna automáticamente como `cliente`."
-    ),
+    summary="Registrar usuario (Solo Admin)",
+    description="Registra un nuevo usuario en el sistema. Operación restringida exclusivamente a administradores.",
 )
-def registro(datos: UsuarioRegistro, db: Session = Depends(get_db)):
+def registro(
+    datos: UsuarioRegistro, 
+    db: Session = Depends(get_db),
+    _admin: Usuario = Depends(get_current_admin)  # LA BARRERA ARQUITECTÓNICA
+):
     if usuario_service.obtener_usuario_por_email(db, datos.email):
         raise HTTPException(
             status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
